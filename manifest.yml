@@ -1,8 +1,21 @@
 ---
 applications:
+- name: movies-ms
+  path: applications/movies-ms/build/libs/movies-ms-1.0-SNAPSHOT.jar
+  routes:
+  - route: suresh-movies-ms.apps.pcf.paltraining.perficient.com
+  services:
+  - movies-ms-database
+- name: podcasts-ms
+  path: applications/podcasts-ms/build/libs/podcasts-ms-1.0-SNAPSHOT.jar
+  routes:
+    - route: suresh-podcasts-ms.apps.pcf.paltraining.perficient.com
+  services:
+  - podcasts-ms-database
 - name: mediabase
-  path: build/libs/mediabase-1.0-SNAPSHOT.war
+  path: applications/mediabase/build/libs/mediabase-1.0-SNAPSHOT.war
   routes:
   - route: suresh-mediabase.apps.pcf.paltraining.perficient.com
-  services:
-  - media-database
+  env:
+    MOVIES_MS_URL: http://suresh-movies-ms.apps.pcf.paltraining.perficient.com/movies
+    PODCASTS_MS_URL: http://suresh-podcasts-ms.apps.pcf.paltraining.perficient.com/podcasts
