@@ -13,7 +13,10 @@ applications:
     - route: suresh-podcasts-ms.apps.pcf.paltraining.perficient.com
   services:
   - podcasts-ms-database
+  - service-registry
 - name: mediabase
   path: applications/mediabase/build/libs/mediabase-1.0-SNAPSHOT.war
   routes:
   - route: suresh-mediabase.apps.pcf.paltraining.perficient.com
+services:
+  - service-registry
