@@ -6,6 +6,7 @@ applications:
   - route: suresh-movies-ms.apps.pcf.paltraining.perficient.com
   services:
   - movies-ms-database
+  - service-registry
 - name: podcasts-ms
   path: applications/podcasts-ms/build/libs/podcasts-ms-1.0-SNAPSHOT.jar
   routes:
@@ -16,6 +17,4 @@ applications:
   path: applications/mediabase/build/libs/mediabase-1.0-SNAPSHOT.war
   routes:
   - route: suresh-mediabase.apps.pcf.paltraining.perficient.com
-  env:
-    MOVIES_MS_URL: http://suresh-movies-ms.apps.pcf.paltraining.perficient.com/movies
-    PODCASTS_MS_URL: http://suresh-podcasts-ms.apps.pcf.paltraining.perficient.com/podcasts
+ 
