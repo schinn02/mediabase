@@ -17,4 +17,3 @@ applications:
   path: applications/mediabase/build/libs/mediabase-1.0-SNAPSHOT.war
   routes:
   - route: suresh-mediabase.apps.pcf.paltraining.perficient.com
- 
