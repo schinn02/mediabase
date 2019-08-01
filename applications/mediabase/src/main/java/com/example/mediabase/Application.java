@@ -27,7 +27,7 @@ public class Application {
         return new ServletRegistrationBean(actionServlet, "/moviefun/*");
     }
 
-  
+
     @Bean
     public MovieClient movieClient(RestOperations restOperations) {
         return new MovieClient("//movies-ms/movies", restOperations);
